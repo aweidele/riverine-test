@@ -44,10 +44,13 @@
   bottom: 60%;
   right: 50%;
   z-index: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .searchlight-lights img {
   width: 100%;
+  height: auto;
 }
 
 :root {
@@ -78,7 +81,7 @@
   --rotateEnd: 45deg;
   --searchlightSpeed: 12s;
 
-  width: 88.88vw;
+  width: 140vw;
   right: 0;
   transform-origin: bottom right;
 }
@@ -86,8 +89,9 @@
 .searchlight-lights > div:nth-child(2) {
   --rotateStart: 20deg;
   --rotateEnd: -20deg;
-  width: 16.2vw;
+  width: 12.2vw;
   right: 0;
+  bottom: 10%;
   transform-origin: bottom center;
 }
 
@@ -97,6 +101,6 @@
   --searchlightSpeed: 11s;
 
   width: 44vw;
-  left: 0%;
+  left: 100%;
   transform-origin: bottom left;
 }
