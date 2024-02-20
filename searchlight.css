@@ -41,8 +41,8 @@
 
 .searchlight-lights {
   position: absolute;
-  bottom: 60%;
-  right: 50%;
+  bottom: 70%;
+  left: 0;
   z-index: 0;
   height: 100%;
   width: 100%;
@@ -55,6 +55,7 @@
 
 :root {
   --searchlightSpeed: 10s;
+  --searchlightTranslate: -50%;
 }
 
 @keyframes searchlight {
@@ -72,35 +73,29 @@
 .searchlight-lights > div {
   position: absolute;
   bottom: 0;
-  transform: rotate(0deg);
+  left: 0;
+  width: 13.3vw;
   animation: searchlight var(--searchlightSpeed) infinite ease-in-out;
+  transform-origin: bottom center;
+  transform: rotate(var(--rotateStart));
 }
 
 .searchlight-lights > div:nth-child(1) {
-  --rotateStart: 0deg;
-  --rotateEnd: 45deg;
+  --rotateStart: -55deg;
+  --rotateEnd: 0deg;
   --searchlightSpeed: 12s;
-
-  width: 140vw;
-  right: 0;
-  transform-origin: bottom right;
+  left: 2%;
 }
 
 .searchlight-lights > div:nth-child(2) {
-  --rotateStart: 20deg;
-  --rotateEnd: -20deg;
-  width: 12.2vw;
-  right: 0;
-  bottom: 10%;
-  transform-origin: bottom center;
+  --rotateStart: -20deg;
+  --rotateEnd: 20deg;
+  left: 8%;
 }
 
 .searchlight-lights > div:nth-child(3) {
-  --rotateStart: 0deg;
+  --rotateStart: 45deg;
   --rotateEnd: -30deg;
   --searchlightSpeed: 11s;
-
-  width: 44vw;
-  left: 100%;
-  transform-origin: bottom left;
+  left: 2%;
 }
